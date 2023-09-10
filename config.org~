@@ -1,0 +1,37 @@
+#+TITLE: CD's Emacs Config
+#+AUTHOR: Sarbagya Nepal
+#+DESCRIPTION: CS's Personal Emacs Config
+#+STARTUP: showeverything
+
+* BASIC UI CHANGE
+
+** Disabling random stuffs
+(scroll-bar-mode -1)        ; Disable visible scrollbar
+(tool-bar-mode -1)          ; Disable the toolbar
+(tooltip-mode -1)           ; Disable tooltips
+(menu-bar-mode -1)            ; Disable the menu bar
+
+** Disabling the ~ files
+(setq backup-directory-alist  '((".*" . "~/.Trash"))) ;; disable ~ files
+
+** Better bracket highlighting
+(show-paren-mode)
+(electric-pair-mode)
+
+** Enabling line highlights
+(global-hl-line-mode t)
+
+** Disable visual-bell
+(setq visible-bell t)
+
+** Basic Theme
+#+begin_src emacs-lisp
+(load-theme 'wombat t)
+#+end_src
+
+* IMPORTANT PROGRAMS TO LOAD FIRST
+** Load Evil Mode
+
+** Package Manager
+
+** General Keybindings
